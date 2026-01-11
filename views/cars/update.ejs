@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update <%= foundCar.brand %></h1>
+
+    <form action="/cars/update/<%= foundCar._id %>" method="post">
+
+        <label for="brand">Brand:</label>
+        <input value="<%= foundCar.brand %>" name="brand" id="brand" type="text">
+
+        <label for="model">Model:</label>
+        <input value="<%= foundCar.model %>" name="model" id="model" type="text">
+
+        <label for="year">Year:</label>
+        <input value="<%= foundCar.year %>" name="year" id="year" type="number">
+
+        <label for="price">Price:</label>
+        <input value="<%= foundCar.price %>" name="price" id="price" type="number">
+        <input <% if(foundCar.isReadyToEat) {%> checked <% } %> name="isReadyToEat" id="isReadyToEat" type="checkbox">
+
+    
+        <button >Update Car</button>
+    </form>
+</body>
+</html>

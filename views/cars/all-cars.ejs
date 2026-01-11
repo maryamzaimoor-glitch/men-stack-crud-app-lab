@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Cars</h1>
+    <% allCars.forEach((oneCar)=>{ %>
+        <p>Brand: <%= oneCar.brand %></p>
+        <p>Model: <%= oneCar.model %></p>
+        <p>Year: <%= oneCar.year %></p>
+        <p>Price: <%= oneCar.price %></p>
+        <a href="/cars/<%=oneCar._id%>">See Details</a>
+    <% }) %>
+
+</body>
+</html>
