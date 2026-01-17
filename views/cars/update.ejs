@@ -8,7 +8,7 @@
 <body>
     <h1>Update <%= foundCar.brand %></h1>
 
-    <form action="/cars/update/<%= foundCar._id %>" method="post">
+        <form action="/cars/<%= foundCar._id %>" method="post">
 
         <label for="brand">Brand:</label>
         <input value="<%= foundCar.brand %>" name="brand" id="brand" type="text">
@@ -21,8 +21,7 @@
 
         <label for="price">Price:</label>
         <input value="<%= foundCar.price %>" name="price" id="price" type="number">
-        <input <% if(foundCar.isReadyToEat) {%> checked <% } %> name="isReadyToEat" id="isReadyToEat" type="checkbox">
-
+    
     
         <button >Update Car</button>
     </form>
